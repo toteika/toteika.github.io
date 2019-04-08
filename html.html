@@ -3,6 +3,7 @@
 <title>Смена картинок</title>
   <body>
 		<script language="javascript">
+			<button>Кнопка</button>
 var i=0;
 var image=document.getElementById("image");
 var imgs=new Array('1.jpg','2.jpg'); //        Добавте свои картинки через запятую
@@ -10,8 +11,7 @@ function imgsrc(){
 i++;
 image.src=imgs[i];
 }
-			<button>Кнопка</button>
-</script>
+	</script>
 </head>
 <body>
 <img id="image" src="1.jpg" onClick="imgsrc();">
