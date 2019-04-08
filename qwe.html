@@ -1,46 +1,11 @@
-<!DOCTYPE HTML>
-<html>
-<body>   
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-<script>
-
-$(function(){
-
-     // скроем изображдения  в начале
-     $("#imgs img").hide();         
-     
-     // выберем первое изображение как стартовое
-     var select= $("#imgs img:eq(0)");
-     
-     //покажем первую картинку
-     select.show();      
-
-     // вместо кнопок использую само изобюражения
-     $("#imgs img").click(function(){
-
-         //скроем текущее изображение
-         select.hide();
-
-         //выберем следующее изображение
-         select=select.next();
-
-         //если следующего изображения нет (ну нету, кончились они :) ), тогда выберем вновь первое изображение
-         if (select.attr("src")==undefined){select=$("#imgs img:eq(0)");};
-
-         //покажем вновь выбранное изображение. 
-         select.show();  
-     });               
-});    
-</script>
-
-<div  id="imgs" align="left">
-  <img width="200px" src="1.jpg"  />
-  <img width="200px" src="2.jpg"  />
-   
-
-
+       <div id="homeimg" align="left">
+ <img src="images/1.png"  />
  </div>
-
-
-</body>
-</html>
+ <div id="homebtn"> 
+ <img id="back" src="images/bgs/back.png" /><img id="next" src="images/bgs/next.png" />
+ </div>
+        <div id="imgs" align="left">
+ <img src="images/1.png"  />
+ <img src="images/2.png"  />
+  <img src="images/3.png"/>
+ </div>
