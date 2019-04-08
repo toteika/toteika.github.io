@@ -1,11 +1,17 @@
-<div class="text-load">Загрузить изображение</div>
- 
-<div><img class="image" src=""></div>
-
-
-var load = document.querySelector('.text-load');
-var image = document.querySelector('.image');
- 
-load.addEventListener('click', function(){
-    image.setAttribute('src', '1.jpg');
-})
+<html>
+<head>
+<title>Смена картинок</title>
+<script language="javascript">
+var i=0;
+var image=document.getElementById("image");
+var imgs=new Array('1.jpg','2.jpg'); //        Добавте свои картинки через запятую
+function imgsrc(){
+i++;
+image.src=imgs[i];
+}
+</script>
+</head>
+<body>
+<img id="image" src="1.jpg" onClick="imgsrc();">
+</body>
+</html>
