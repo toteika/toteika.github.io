@@ -2,13 +2,16 @@
 	<HEAD>
 		<TITLE>Отпуск</TITLE>
 		<!--Подключаем JQuery плагин, файл со скриптами и файл со стилями-->
-						<script  src="js.js"></script>
+	<script  src="js.js"></script>
+		<a href="#" onclick="slide(1)">Вперед</a>
+<img id="pic" src="1.jpg" style="position:absolute; left:10%; top:20%" />
+
 	</HEAD>
 	<BODY>
 		<!--Тэг <input> с атрибутом type="button" - создаст кнопку-->
 		<input  type="button"  id="mybutton" value="Показать">
 		<br>
 		<!--А это наш блок с тэгом <img>, который выведет картинку "1.jpg"-->
-		<div  id="img_box"><img  src="img/2.jpg"></div>
+		<div  id="img_box"><img  src="img/1.jpg"></div>
 	</BODY>
 </HTML>
