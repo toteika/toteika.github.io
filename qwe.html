@@ -1,11 +1,15 @@
-       <div id="homeimg" align="left">
- <img src="images/1.jpg"  />
- </div>
- <div id="homebtn"> 
- <img id="back" src="images/bgs/back.jpg" /><img id="next" src="images/bgs/next.jpg" />
- </div>
-        <div id="imgs" align="left">
- <img src="images/1.jpg"  />
- <img src="images/2.jpg"  />
-  
- </div>
+ $(document).ready(function(){
+  $('.slide__thumbnails .thumb').click(function(){
+    
+    var imgThumb = $(this).attr('src');
+    var oldImg = $('.full_img');
+    var imgFull = $('<img class="full_img" src="' + imgThumb +'">');
+    imgFull.hide();
+    $('.full').prepend(imgFull);
+    imgFull.show(1);
+    oldImg.hide(1,function(){
+      $(this).remove();
+    });
+  });
+});
+$('thumb:first').click();
