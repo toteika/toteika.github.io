@@ -1,9 +1,21 @@
-// Загрузка скрипта после полной загрузки страницы
-$(document).ready(function() {
-	// Привязываем событие "click" - нажатие, к кнопке с id="mybutton"
-	$(document).on("click", "#mybutton", function() {
-		// Привязываем функцию "toggle" к элементу с тэгом <img>
-		// содержащимся в элементе с id="img_box"
-		$("#img_box>img").toggle();
-	});
-});
+<script type="text/javascript">
+            function chg1 (id)
+            {
+                var el = document.getElementById(id);
+                var all = new Array();
+                var num = 0;
+                all[0] = "1.jpg";
+                all[1] = "2.jpg";
+                
+                for (var i=0; i<2; i++)
+                {
+                    if (el.src == all[i])
+                    {
+                        num == i;
+                        break;
+                    }
+                }
+                num++;
+                el.src=all[num];
+            }   
+        </script>
