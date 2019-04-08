@@ -1,19 +1,27 @@
-<html>
-<head>
-<title>Смена картинок</title>
-  <body>
-		<script language="javascript">
-			<button>Кнопка</button>
-var i=0;
-var image=document.getElementById("image");
-var imgs=new Array('1.jpg','2.jpg'); //        Добавте свои картинки через запятую
-function imgsrc(){
-i++;
-image.src=imgs[i];
-}
-	</script>
-</head>
-<body>
-<img id="image" src="1.jpg" onClick="imgsrc();">
-</body>
-</html>
+<div class="imghead"></div>
+<div class="imghead"></div>
+<div class="imghead"></div>
+<button class="btn-hdbg">Click me</button>
+<script src='http://code.jquery.com/jquery-1.9.1.js'></script>
+<script>
+! function($) {
+  var images = [
+      'images/1.jpg',
+      'images/2.jpg',
+          ],
+    $div = $(".imghead");
+
+  function next(arr) {
+    var i = 0;
+    return function() {
+      return arr[i++ % arr.length];
+    };
+  }
+  var newImg = next(images);
+  $(".btn-hdbg").on('click', function() {
+    var url =  'url(' + newImg() + ')';
+    $div.css('backgroundImage', url);
+    $div.text(url);
+  });
+}(window.jQuery);
+</script>
