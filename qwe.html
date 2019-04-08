@@ -3,6 +3,14 @@
     <img src="1.jpg" />
 </div>
 <input id="change_img" type="submit" value="Сменить картинку" />
-("#change_img").click(function(){
-    ("#images").html('<img src="2.jpg" />')
+
+<!-- jQuery -->
+$("#change_img").click(function(){
+    var num_img_0 = '<img src="1.jpg" />';
+    
+    
+    if($("#images").html() == num_img_0){
+        $("#images").html(num_img_1);
+    }
+   
 })
