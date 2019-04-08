@@ -1,15 +1,23 @@
- $(document).ready(function(){
-  $('.slide__thumbnails .thumb').click(function(){
-    
-    var imgThumb = $(this).attr('src');
-    var oldImg = $('.full_img');
-    var imgFull = $('<img class="full_img" src="' + imgThumb +'">');
-    imgFull.hide();
-    $('.full').prepend(imgFull);
-    imgFull.show(1);
-    oldImg.hide(1,function(){
-      $(this).remove();
-    });
-  });
-});
-$('thumb:first').click();
+<div class="full">
+</div>
+<img src="1.jpg" alt="" class="full_img">
+</div>
+<!-- <a class="thumb_trigger" href="#"> -->
+<div class="slide__thumbnails">
+  <img src="1.jpg" alt="" class="thumb">
+  <!-- </a> -->
+  <!-- <a class="thumb_trigger" href="#"> -->
+  <img src="2" alt=""
+    class="thumb">
+
+  <div class="full">
+  </div>
+  <img src="1.jpg" alt="" class="full_img">
+</div>
+<!-- <a class="thumb_trigger" href="#"> -->
+<div class="slide__thumbnails">
+  <img src="1.jpg" alt="" class="thumb">
+  <!-- </a> -->
+  <!-- <a class="thumb_trigger" href="#"> -->
+  <img src="1.jpg" alt=""
+    class="thumb">
