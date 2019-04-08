@@ -1,0 +1,10 @@
+<img id="img1" src="1.jpg" alt="img">
+
+<script>
+ function changeImgSrc(id, src) {
+   var img = document.getElementById(id);
+    if (img != null) img.src = src;
+  }
+</script>
+
+<button onClick="changeImgSrc('img1', '2.jpg')">Кнопка</button>
