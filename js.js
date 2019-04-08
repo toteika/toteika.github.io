@@ -1,12 +1,6 @@
-$(document).ready( function() {
-$('#imgs').hide(1);
-  var path = $('#imgs img').attr('src');
-	$('#back').click(function(){
-	  $('#homeimg').animate({opacity: 1},100,function(){
-	    $(this).html('<img src=' + path + ' />').find('img');
-	  });
-	  return false;
-	});
-
-
-}); // End of ready
+function imgsrc(img) {
+  if ($(img).attr("src") == "img/1.jpg")
+    $(img).attr("src", "img/2.jpg");
+  else
+    $(img).attr("src", "img/1.jpg");
+}
