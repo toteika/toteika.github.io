@@ -1,18 +1,18 @@
 <html>
-<head>
-    <title>Отпуск</title>
+    <head>
+    <title>Смена картинок</title>
+</head>
+<body>
+    <img id="image" src="note.png" onClick="imgsrc();">
     <script language="javascript">
         var i=0;
         var image=document.getElementById("image");
         // Добавте свои картинки через запятую
         var imgs=new Array('1.jpg','2.jpg');
         function imgsrc() {
-            i++;i%=imgs.length;
-            image.src = imgs[i];
+            i++;
+            image.src=imgs[i];
         }
     </script>
-</head>
-<body>
-    <img id="image" src="" onClick="imgsrc();">
 </body>
 </html>
