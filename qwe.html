@@ -1,23 +1,14 @@
-<div class="full">
-</div>
-<img src="1.jpg" alt="" class="full_img">
-</div>
-<!-- <a class="thumb_trigger" href="#"> -->
-<div class="slide__thumbnails">
-  <img src="1.jpg" alt="" class="thumb">
-  <!-- </a> -->
-  <!-- <a class="thumb_trigger" href="#"> -->
-  <img src="2" alt=""
-    class="thumb">
-
-  <div class="full">
-  </div>
-  <img src="1.jpg" alt="" class="full_img">
-</div>
-<!-- <a class="thumb_trigger" href="#"> -->
-<div class="slide__thumbnails">
-  <img src="1.jpg" alt="" class="thumb">
-  <!-- </a> -->
-  <!-- <a class="thumb_trigger" href="#"> -->
-  <img src="1.jpg" alt=""
-    class="thumb">
+<html>
+ <img SRC="1.jpg" onclick=imgchange(this,"1.jpg","2.jpg")>
+<script>
+  var x=false
+  function imgchange(obj,imgX,imgY) {
+   if  (x){
+   obj.src=imgX
+   } else {
+   obj.src=imgY
+   }
+  x=!x
+ }
+ </script>
+ </html>
