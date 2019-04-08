@@ -1,19 +1,18 @@
-<HTML>
-	<HEAD>
-		<TITLE>Отпуск</TITLE>
-		<!--Подключаем JQuery плагин, файл со скриптами и файл со стилями-->
-		
-				<script  src="js/js.js"></script>
-		<div class="tables">
-    <img src="images/1.jpg" id="image1">
-    <img src="images/2.jpg" id="image2">
-</div>
-	</HEAD>
-	<BODY>
-		<!--Тэг <input> с атрибутом type="button" - создаст кнопку-->
-		<input  type="button"  id="mybutton" value="Показать">
-		<br>
-		<!--А это наш блок с тэгом <img>, который выведет картинку "1.jpg"-->
-		<div  id="img_box"><img  src="img/1.jpg"></div>
-	</BODY>
-</HTML>
+<html>
+<head>
+    <title>Отпуск</title>
+    <script language="javascript">
+        var i=0;
+        var image=document.getElementById("image");
+        // Добавте свои картинки через запятую
+        var imgs=new Array('1.jpg','2.jpg');
+        function imgsrc() {
+            i++;i%=imgs.length;
+            image.src = imgs[i];
+        }
+    </script>
+</head>
+<body>
+    <img id="image" src="" onClick="imgsrc();">
+</body>
+</html>
