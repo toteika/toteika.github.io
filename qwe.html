@@ -1,18 +1,9 @@
+<!DOCTYPE html>
 <html>
-    <head>
-    <title>Смена картинок</title>
-</head>
 <body>
-    <img id="image" src="1.jpg" onClick="imgsrc();">
-    <script language="javascript">
-        var i=0;
-        var image=document.getElementById("image");
-        // Добавте свои картинки через запятую
-        var imgs=new Array('1.jpg','2.jpg');
-        function imgsrc() {
-            i++;
-            image.src=imgs[i];
-        }
-    </script>
+<img id="myImg" src="1.jpg" width="107" height="98">
+<br><br>
+<button onclick="document.getElementById('myImg').src='1.jpg'">Да</button>
+<button onclick="document.getElementById('myImg').src='2.jpg'">Нет</button>
 </body>
-</html>
+<⁄html>
