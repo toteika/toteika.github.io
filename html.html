@@ -1,10 +1,11 @@
-<img id="img1" src="1.jpg" alt="img">
+<div class="text-load">Загрузить изображение</div>
+ 
+<div><img class="image" src=""></div>
 
-<script>
- function changeImgSrc(id, src) {
-   var img = document.getElementById(id);
-    if (img != null) img.src = src;
-  }
-</script>
 
-<button onClick="changeImgSrc('img1', '2.jpg')">Кнопка</button>
+var load = document.querySelector('.text-load');
+var image = document.querySelector('.image');
+ 
+load.addEventListener('click', function(){
+    image.setAttribute('src', '1.jpg');
+})
