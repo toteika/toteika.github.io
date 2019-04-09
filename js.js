@@ -1,11 +1,9 @@
-<img id="d1" src="1.jpg"/>
-  $("#d1").attr("src","2.jpg");
-$("#d1").bind("click", function() {
-      $("#d1").attr("src","2.jpg");
-});
-$("img").bind("click", function() {
-      var src = ($(this).attr("src") === "1.jpg")
-                    ? "2.jpg" 
-                    : "1.jpg";
-      $(this).attr("src", src);
+// Загрузка скрипта после полной загрузки страницы
+$(document).ready(function() {
+	// Привязываем событие "click" - нажатие, к кнопке с id="mybutton"
+	$(document).on("click", "#mybutton", function() {
+		// Привязываем функцию "toggle" к элементу с тэгом <img>
+		// содержащимся в элементе с id="img_box"
+		$("#img_box>img").toggle();
+	});
 });
