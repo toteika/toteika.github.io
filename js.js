@@ -1,6 +1,9 @@
-function imgsrc(img) {
-  if ($(img).attr("src") == "img/1.jpg")
-    $(img).attr("src", "img/2.jpg");
-  else
-    $(img).attr("src", "img/1.jpg");
-}
+// Загрузка скрипта после полной загрузки страницы
+$(document).ready(function() {
+	// Привязываем событие "click" - нажатие, к кнопке с id="mybutton"
+	$(document).on("click", "#mybutton", function() {
+		// Привязываем функцию "toggle" к элементу с тэгом <img>
+		// содержащимся в элементе с id="img_box"
+		$("#img_box>img").toggle();
+	});
+});
