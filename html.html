@@ -1,43 +1,18 @@
-<div class="imghead"></div>
-<div class="imghead"></div>
-<div class="imghead"></div>
-<button class="btn-hdbg">Click me</button>
-<script src='http://code.jquery.com/jquery-1.9.1.js'></script>
-<script src="js.js"></script>
-<script>
-! function($) {
-  var images = [
-      'images/1.jpg',
-      'images/2.jpg',
-          ],
-    $div = $(".imghead");
-
-  function next(arr) {
-    var i = 0;
-    return function() {
-      return arr[i++ % arr.length];
-    };
-  }
-  var newImg = next(images);
-  $(".btn-hdbg").on('click', function() {
-    var url =  'url(' + newImg() + ')';
-    $div.css('backgroundImage', url);
-    $div.text(url);
-  });
-}(window.jQuery);
-  <img src="/img/plus.gif?fig.sunim/gmi/" id="icon">
- 
- <img SRC="1.jpg" onclick=imgchange(this,"1.jpg","2.jpg")>
-       
-<script>
-  var x=false
-  function imgchange(obj,imgX,imgY) {
-   if  (x){
-   obj.src=imgX
-   } else {
-   obj.src=imgY
-   }
-  x=!x
- }
- </script>
-</script>
+<html>
+    <head>
+    <title>Смена картинок</title>
+</head>
+<body>
+    <img id="image" src="1.jpg" onClick="imgsrc();">
+    <script language="javascript">
+        var i=0;
+        var image=document.getElementById("image");
+        // Добавте свои картинки через запятую
+        var imgs=new Array('1.jpg','2.jpg');
+        function imgsrc() {
+            i++;
+            image.src=imgs[i];
+        }
+    </script>
+</body>
+</html>
