@@ -1,20 +1,11 @@
-<script type="text/javascript">
-  var array = new Array(
-  "1.jpg",
-  "2.jpg"
-  
-  );//массив с путями к картинкам
-  var i = 0;
-  function left() {
-  var image = document.getElementById("rotatorbutton");
-  i--;
-  if (i < 0) i = array.length - 1;
-  image.src = array[i]; 
-}
-  function right() {
-  var image = document.getElementById("rotatorbutton");
-  i++;
-  if (i == array.length) i = 0;
-  image.src = array[i];
-  }
-</script>
+<img id="d1" src="1.jpg"/>
+  $("#d1").attr("src","2.jpg");
+$("#d1").bind("click", function() {
+      $("#d1").attr("src","2.jpg");
+});
+$("img").bind("click", function() {
+      var src = ($(this).attr("src") === "1.jpg")
+                    ? "2.jpg" 
+                    : "1.jpg";
+      $(this).attr("src", src);
+});
