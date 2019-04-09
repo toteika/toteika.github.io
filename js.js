@@ -1,8 +1,7 @@
-// Загрузка скрипта после полной загрузки страницы
-$(document).ready(function() {
-	// Привязываем событие "click" - нажатие, к кнопке с id="mybutton"
-	$(document).on("click", "#mybutton", function() {
-		
-		
-	});
+$(function() {
+  $('.menulink').click(function(){
+    $("#bg").attr('src',"img/1.jpg");
+  });
 });
+<a href="" title="Switch" class="menulink">switch me</a>
+    <img src="img/2.jpg" id="bg" />
