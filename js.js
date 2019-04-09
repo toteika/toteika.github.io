@@ -4,4 +4,4 @@ $(function() {
   });
 });
 <a href="" title="Switch" class="menulink">switch me</a>
-    <img src="img/2.jpg" id="bg" />
+    <img src="img/2.jpg" id="imgbox" />
