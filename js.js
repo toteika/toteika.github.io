@@ -10,3 +10,11 @@
   i--;
   if (i < 0) i = array.length - 1;
   image.src = array[i]; 
+}
+  function right() {
+  var image = document.getElementById("rotatorbutton");
+  i++;
+  if (i == array.length) i = 0;
+  image.src = array[i];
+  }
+</script>
