@@ -1,18 +1,16 @@
-<html>
-    <head>
-    <title>Смена картинок</title>
-</head>
-<body>
-    <img id="image" src="1.jpg" onClick="imgsrc();">
-    <script language="javascript">
-        var i=0;
-        var image=document.getElementById("image");
-        // Добавте свои картинки через запятую
-        var imgs=new Array('1.jpg','2.jpg');
-        function imgsrc() {
-            i++;
-            image.src=imgs[i];
-        }
-    </script>
-</body>
-</html>
+<HTML>
+	<HEAD>
+		<TITLE>Отпуск</TITLE>
+		<!--Подключаем JQuery плагин, файл со скриптами -->
+		
+		<script  src="js/jquery-2.1.3.min.js"></script>
+		<script  src="js/js.js"></script>
+	</HEAD>
+	<BODY>
+		<!--Тэг <input> с атрибутом type="button" - создаст кнопку-->
+		<input  type="button"  id="mybutton" value="тык">
+		<br>
+		<!--А это наш блок с тэгом <img>, который выведет картинку "1.jpg"-->
+		<div  id="img_box"><img  src="img/1.jpg"></div>
+	</BODY>
+</HTML>
