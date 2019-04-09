@@ -1,7 +1,12 @@
-$(function() {
-  $('.menulink').click(function(){
-    $("#img_box").attr('src',"img/1.jpg");
-  });
-});
-<a href="" title="Switch" class="menulink">switch me</a>
-    <img src="img/2.jpg" id="img_box" />
+<script type="text/javascript">
+  var array = new Array(
+  "1.jpg",
+  "2.jpg"
+  
+  );//массив с путями к картинкам
+  var i = 0;
+  function left() {
+  var image = document.getElementById("rotatorbutton");
+  i--;
+  if (i < 0) i = array.length - 1;
+  image.src = array[i]; 
