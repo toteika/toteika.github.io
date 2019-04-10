@@ -7,7 +7,7 @@
     <img id="myImg" src="2.jpg" >
     <br><br>
     <button onclick="changepic()">тык</button>
-    <div id="myDIV">Hello</div>
+    <div id="myDIV">One</div>
     
   </body>
   <script>
@@ -15,12 +15,12 @@
     var x = document.getElementById("myDIV");
   if (document.getElementById('myImg').src == "https://toteika.github.io/1.jpg") {
     var src = "2.jpg";
-      x.innerHTML = "Swapped text!";
+      x.innerHTML = "One";
   }
   else
   {
     var src = "1.jpg";
-    x.innerHTML = "Hello";
+    x.innerHTML = "Next";
    }
   document.getElementById('myImg').src=src
 }
