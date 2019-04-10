@@ -1,13 +1,15 @@
-function changepic() {
-  if (document.getElementById('myImg').src == "1.jpg") {
+ <script>
+  function changepic() {
+    var x = document.getElementById("myDIV");
+  if (document.getElementById('myImg').src == "https://toteika.github.io/1.jpg") {
     var src = "2.jpg";
-  //  $("#text").text("Cобачка2");
+      x.innerHTML = "One";
   }
   else
   {
     var src = "1.jpg";
-   // $("#text").text("Cобачка1");
-  }
+    x.innerHTML = "Next";
+   }
   document.getElementById('myImg').src=src
-  // $("#my_image").attr("src", src);
 }
+    </script>
