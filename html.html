@@ -8,6 +8,8 @@
     <img id="myImg" src="2.jpg" >
     <br><br>
     <button onclick="changepic()">тык</button>
+    <div id="myDIV">Hello</div>
+    
   </body>
   <script>
   function changepic() {
@@ -24,4 +26,14 @@
   // $("#my_image").attr("src", src);
 }
     </script>
+<script>
+  function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.innerHTML === "Hello") {
+    x.innerHTML = "Swapped text!";
+  } else {
+    x.innerHTML = "Hello";
+  }
+} 
+</script>
 </html>
